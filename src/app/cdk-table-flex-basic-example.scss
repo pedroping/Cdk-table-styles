@@ -1,0 +1,43 @@
+/**
+ * Add basic flex styling so that the cells evenly space themselves in the row.
+ */
+cdk-row,
+cdk-header-row,
+cdk-footer-row {
+  display: flex;
+}
+
+cdk-cell,
+cdk-header-cell,
+cdk-footer-cell {
+  flex: 1;
+}
+cdk-header-cell:first-child,
+cdk-cell:first-child {
+  padding-left: 5px;
+}
+
+cdk-header-cell:last-child {
+  background-color: gray;
+  border-top-right-radius: 5px;
+}
+cdk-header-cell:first-child {
+  background-color: gray;
+  border-top-left-radius: 5px;
+}
+
+cdk-header-cell {
+  background-color: gray;
+}
+
+cdk-cell {
+  background-color: rgb(214, 214, 214);
+}
+
+cdk-row:last-child {
+  cdk-cell {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+}
