@@ -43,6 +43,9 @@ cdk-cell {
 }
 
 cdk-row:last-child {
+  cdk-cell {
+    padding-bottom: 2px;
+  }
   cdk-cell:first-child {
     border-bottom-left-radius: 5px;
   }
