@@ -14,7 +14,19 @@
   <!-- Weight Column -->
   <ng-container cdkColumnDef="weight">
     <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>
-    <cdk-cell *cdkCellDef="let element"> {{element.weight}} </cdk-cell>
+    <cdk-cell *cdkCellDef="let element">
+      <input
+        type="text"
+        style="
+          width: 80%;
+          border: none;
+          border-radius: 5px;
+          margin-bottom: 5px;
+          text-align: center;
+        "
+        [(ngModel)]="element.weight"
+      />
+    </cdk-cell>
   </ng-container>
 
   <!-- Symbol Column -->
@@ -26,7 +38,6 @@
   <cdk-header-row *cdkHeaderRowDef="displayedColumns"></cdk-header-row>
   <cdk-row *cdkRowDef="let row; columns: displayedColumns;"></cdk-row>
 </cdk-table>
-
 
 <!-- Copyright 2023 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
